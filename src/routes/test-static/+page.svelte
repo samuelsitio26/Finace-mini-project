@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import { onMount } from 'svelte';
 
 	let imageLoadSuccess = false;
@@ -49,4 +49,4 @@
 		display: block;
 		max-width: 100%;
 	}
-</style>
+</style> -->

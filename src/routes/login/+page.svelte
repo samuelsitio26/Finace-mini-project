@@ -34,11 +34,11 @@
 			if (isAuthenticated) {
 				unsubscribeAuth = isAuthenticated.subscribe((value) => {
 					isLoggedIn = value;
-					// If already logged in, redirect to dashboard
-					if (value && typeof window !== 'undefined') {
+					// Redirect hanya jika sudah benar-benar login
+					if (value === true && typeof window !== 'undefined') {
 						const user = window.localStorage.getItem('user_email');
 						currentUserEmail = user || '';
-						window.location.href = '/dashboard';
+						window.location.replace('/dashboard');
 					} else {
 						currentUserEmail = '';
 					}
